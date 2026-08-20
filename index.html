@@ -1,1 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeHeart 家心 — 承載家庭三代情感的私密 AI</title>
+    <meta name="description" content="HomeHeart 不是冰冷的工具，是一份承載全家三代情感與溫度的數位傳家寶。100% 本機端 AI，零雲端、零追蹤，一次買斷支援 Apple 家人共享。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-navy: #1C2434;
+            --deep-navy: #0F141E;
+            --accent-warm: #E67E22;
+            --terracotta: #D96A50;
+            --sage-green: #5B8C71;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--deep-navy);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            background: rgba(15, 20, 30, 0.85);
+            backdrop-filter: blur(16px);
+            z-index: 100;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            font-size: 22px;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent-warm), var(--sage-green));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(230, 126, 34, 0.12);
+            border: 1px solid rgba(230, 126, 34, 0.3);
+            border-radius: 99px;
+            color: var(--accent-warm);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--text-secondary);
+            max-width: 680px;
+            margin: 0 auto 36px;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, var(--terracotta), var(--accent-warm));
+            color: #FFFFFF;
+            padding: 16px 36px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(217, 106, 80, 0.35);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(217, 106, 80, 0.45);
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 32px 24px;
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+
+        .feature-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 32px;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 40px 32px;
+            border-radius: 24px;
+            text-align: left;
+            position: relative;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--accent-warm);
+            background: rgba(230, 126, 34, 0.05);
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: -14px;
+            right: 24px;
+            background: var(--accent-warm);
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 99px;
+        }
+
+        .price-amount {
+            font-size: 40px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin: 16px 0 8px;
+        }
+
+        .price-sub {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0 40px;
+            border-top: 1px solid var(--card-border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--accent-warm);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <div class="logo-icon">🏠</div>
+                HomeHeart 家心
+            </a>
+            <div class="nav-links">
+                <a href="#features">功能特色</a>
+                <a href="#pricing">方案定價</a>
+                <a href="privacy.html">隱私權政策</a>
+                <a href="mailto:howly7777777@gmail.com">技術支援</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">🔒 100% 機端 AI • 零雲端 • 零數據追蹤</div>
+            <h1>不是冰冷的工具<br>是一份承載家庭三代情感的溫度</h1>
+            <p>科技不該讓我們與家人漸行漸遠。《HomeHeart 家心》專為注重隱私的家庭打造，整合親情溫度計、語氣修飾、口述歷史與長輩守護，買斷制支援 Apple 家人共享。</p>
+            <a href="mailto:howly7777777@gmail.com?subject=HomeHeart%20Inquiry" class="cta-btn">
+                <span>🍎 App Store 下載（即將上架）</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="container" id="features">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>親情橋樑 (Bond)</h3>
+                <p><strong>關係溫度計與非暴力溝通</strong>：主動提醒您聯絡家人，並在情緒激動時自動修飾語氣，提供溫和開場替代句。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📔</div>
+                <h3>生命記錄 (Vault)</h3>
+                <p><strong>5 大主題口述歷史訪談</strong>：引導長輩訴說童年、愛情與人生智慧，一鍵排版匯出為精美傳家故事書。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👵</div>
+                <h3>長輩守護 (ElderGlow)</h3>
+                <p><strong>超大字體與 AI 語音助手</strong>：長輩一鍵按鈕詢問「今天吃藥了嗎？」、「打給兒子」，服藥即時與子女手機雙向同步。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧘</div>
+                <h3>心靈空間 (Mirror)</h3>
+                <p><strong>私密 CBT 心情反思</strong>：完全本機端加密，陪伴您整理思緒與每週情緒韌性週報，絕不聯網。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="badge">💰 終身擁有 • 拒絕訂閱制</div>
+            <h2>一次買斷，守護全家三代</h2>
+            <p style="color: var(--text-secondary); margin-top: 8px;">反對在家庭情感上收取月租費。1 人購買，最多 6 位家人共享。</p>
+            
+            <div class="pricing-grid">
+                <!-- Personal Tier -->
+                <div class="price-card">
+                    <h3>個人終身通行證</h3>
+                    <div class="price-amount">$14.99</div>
+                    <div class="price-sub">一次付清 • 個人單一裝置</div>
+                    <ul class="feature-list">
+                        <li>✅ 溫柔語氣修飾器 (NVC)</li>
+                        <li>✅ CBT 心靈空間與每週趨勢分析</li>
+                        <li>✅ 100% 本機端 AI 運算</li>
+                        <li>❌ 不支援長輩模式與傳家故事書匯出</li>
+                    </ul>
+                </div>
+
+                <!-- Family Tier (Featured) -->
+                <div class="price-card featured">
+                    <div class="featured-tag">⭐ 最佳價值 • 家人共享</div>
+                    <h3>家庭旗艦終身通行證</h3>
+                    <div class="price-amount">$29.99</div>
+                    <div class="price-sub">一次付清 • 全家 6 人永久使用（平均每人只需 $4.99）</div>
+                    <ul class="feature-list">
+                        <li>✅ <strong>支援 Apple 家人共享（全家 6 人終身使用）</strong></li>
+                        <li>✅ <strong>長輩極簡守護模式 & 本機 AI 語音助理</strong></li>
+                        <li>✅ <strong>5 大主題口述歷史引導 & 傳家故事書匯出</strong></li>
+                        <li>✅ <strong>Gottman 親情溝通解衝突修飾器</strong></li>
+                        <li>✅ <strong>100% 本機端 AI • 零雲端 • 零資料收集</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">隱私權政策 (Privacy Policy)</a>
+                <span>•</span>
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">標準使用者合約 (EULA)</a>
+                <span>•</span>
+                <a href="mailto:howly7777777@gmail.com">聯絡支援 (Support)</a>
+            </div>
+            <p>© 2026 HomeHeart. All Rights Reserved. Built with privacy and love for families.</p>
+            <p style="margin-top: 6px; font-size: 12px;">技術支援信箱：<a href="mailto:howly7777777@gmail.com">howly7777777@gmail.com</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
