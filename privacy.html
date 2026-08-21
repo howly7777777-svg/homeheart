@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私權政策 (Privacy Policy) — HomeHeart 家心</title>
+    <title>Privacy Policy — HomeHeart</title>
+    <meta name="description" content="HomeHeart Privacy Policy. 100% On-Device AI, Data Not Collected.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --deep-navy: #0F141E;
@@ -21,7 +22,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Plus Jakarta Sans', 'Noto Sans TC', 'Noto Sans SC', 'Noto Sans JP', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
@@ -32,7 +33,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 840px;
             margin: 0 auto;
             background: var(--card-bg);
             border: 1px solid var(--card-border);
@@ -41,8 +42,32 @@
             backdrop-filter: blur(16px);
         }
 
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .lang-select {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .lang-select option {
+            background: var(--deep-navy);
+            color: #FFFFFF;
+        }
+
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             color: #FFFFFF;
             margin-bottom: 8px;
         }
@@ -50,11 +75,11 @@
         .last-updated {
             font-size: 14px;
             color: var(--accent-warm);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         h2 {
-            font-size: 20px;
+            font-size: 19px;
             color: #FFFFFF;
             margin: 28px 0 12px;
             border-bottom: 1px solid var(--card-border);
@@ -95,41 +120,209 @@
 <body>
 
     <div class="container">
-        <h1>HomeHeart 隱私權政策 (Privacy Policy)</h1>
-        <div class="last-updated">生效日期：2026 年 8 月 20 日</div>
-
-        <div class="highlight-box">
-            <strong style="color: #FFFFFF;">🌟 核心隱私承諾：</strong><br>
-            《HomeHeart 家心》完全基於 Apple Silicon 本機端 AI 架構設計。<strong>我們不擁有任何雲端資料庫伺服器，絕不收集、絕不上傳、絕不轉售您的任何個人、家庭、通話、錄音或日記資料。</strong>
+        <div class="header-bar">
+            <a href="index.html" class="back-link" style="margin-top: 0;" id="back_btn">← 返回首頁</a>
+            <select id="languageSelect" class="lang-select" onchange="changeLanguage(this.value)">
+                <option value="zh-Hant">繁體中文</option>
+                <option value="en">English</option>
+                <option value="zh-Hans">简体中文</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+            </select>
         </div>
 
-        <h2>1. 資料收集與使用 (Data Collection)</h2>
-        <p>在 App Store 官方隱私權營養標籤中，HomeHeart 認證為 <strong>「未收集任何資料 (Data Not Collected)」</strong>：</p>
-        <ul>
+        <h1 id="privacy_title">HomeHeart 隱私權政策</h1>
+        <div class="last-updated" id="privacy_updated">生效日期：2026 年 8 月 20 日</div>
+
+        <div class="highlight-box">
+            <strong style="color: #FFFFFF;" id="box_title">🌟 核心隱私承諾：</strong><br>
+            <span id="box_content">《HomeHeart 家心》完全基於 Apple Silicon 本機端 AI 架構設計。<strong>我們不擁有任何雲端資料庫伺服器，絕不收集、絕不上傳、絕不轉售您的任何個人、家庭、通話、錄音或日記資料。</strong></span>
+        </div>
+
+        <h2 id="sec1_title">1. 資料收集與使用 (Data Collection)</h2>
+        <p id="sec1_p">在 App Store 官方隱私權營養標籤中，HomeHeart 認證為 <strong>「未收集任何資料 (Data Not Collected)」</strong>：</p>
+        <ul id="sec1_list">
             <li><strong>家庭成員與聯絡資訊</strong>：僅儲存在您裝置本機的安全儲存區，用於計算聯絡提醒。</li>
             <li><strong>口述歷史錄音與故事</strong>：所有語音轉文字與故事整理 100% 於本機端由 Apple NaturalLanguage 引擎處理，音檔永不離開您的 iPhone/iPad。</li>
             <li><strong>心靈日記與情緒分析</strong>：您的文字與情緒指數完全於本機加密計算，無任何第三方 SDK 介入。</li>
             <li><strong>長輩語音對話</strong>：語音指令由 iOS 本地語音框架解析，絕不上傳外部 AI 伺服器進行訓練。</li>
         </ul>
 
-        <h2>2. 麥克風與語音辨識權限 (Permissions)</h2>
-        <p>當您使用口述歷史錄製或長輩語音助手時，App 會請求麥克風與語音辨識權限。此權限僅在您主動點擊錄音按鈕時於本機運行，絕不在背景竊聽或上傳音訊。</p>
+        <h2 id="sec2_title">2. 麥克風與語音辨識權限 (Permissions)</h2>
+        <p id="sec2_p">當您使用口述歷史錄製或長輩語音助手時，App 會請求麥克風與語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽或上傳音訊。</p>
 
-        <h2>3. 內購與交易安全 (In-App Purchases)</h2>
-        <p>所有交易（個人版與家庭版 Lifetime Pass）均由 Apple App Store 系統直接處理與驗證。我們無法取得您的信用卡卡號或任何帳單個資。</p>
+        <h2 id="sec3_title">3. 內購與交易安全 (In-App Purchases)</h2>
+        <p id="sec3_p">所有交易（個人版與家庭版 Lifetime Pass）均由 Apple App Store 系統直接處理與驗證。我們無法取得您的信用卡卡號或任何帳單個資。</p>
 
-        <h2>4. 兒童與家庭安全 (Children's Privacy)</h2>
-        <p>HomeHeart 符合 Apple 家人共享標準，不向任何未成年人收集任何可識別個資。</p>
+        <h2 id="sec4_title">4. 兒童與家庭安全 (Children's Privacy)</h2>
+        <p id="sec4_p">HomeHeart 符合 Apple 家人共享標準，不向任何未成年人收集任何可識別個資。</p>
 
-        <h2>5. 政策修訂 (Updates)</h2>
-        <p>若本政策有任何細微調整，將直接於此頁面更新。我們承諾永遠維持「100% 零雲端隱私」的架構原則。</p>
+        <h2 id="sec5_title">5. 政策修訂 (Updates)</h2>
+        <p id="sec5_p">若本政策有任何細微調整，將直接於此頁面更新。我們承諾永遠維持「100% 零雲端隱私」的架構原則。</p>
 
-        <h2>6. 聯絡我們 (Contact & Support)</h2>
-        <p>如果您對 HomeHeart 的隱私架構有任何問題或建議，歡迎隨時透過電子郵件與開發團隊聯繫：</p>
+        <h2 id="sec6_title">6. 聯絡我們 (Contact & Support)</h2>
+        <p id="sec6_p">如果您對 HomeHeart 的隱私架構有任何問題或建議，歡迎隨時透過電子郵件與開發團隊聯繫：</p>
         <p><strong>技術支援信箱：</strong><a href="mailto:howly7777777@gmail.com">howly7777777@gmail.com</a></p>
 
-        <a href="index.html" class="back-link">← 返回 HomeHeart 首頁</a>
+        <a href="index.html" class="back-link" id="bottom_back_btn">← 返回 HomeHeart 首頁</a>
     </div>
+
+    <script>
+        const privacyI18n = {
+            "zh-Hant": {
+                backBtn: "← 返回首頁",
+                bottomBackBtn: "← 返回 HomeHeart 首頁",
+                title: "HomeHeart 隱私權政策",
+                updated: "生效日期：2026 年 8 月 20 日",
+                boxTitle: "🌟 核心隱私承諾：",
+                boxContent: "《HomeHeart 家心》完全基於 Apple Silicon 本機端 AI 架構設計。<strong>我們不擁有任何雲端資料庫伺服器，絕不收集、絕不上傳、絕不轉售您的任何個人、家庭、通話、錄音或日記資料。</strong>",
+                sec1Title: "1. 資料收集與使用 (Data Collection)",
+                sec1P: "在 App Store 官方隱私權營養標籤中，HomeHeart 認證為 <strong>「未收集任何資料 (Data Not Collected)」</strong>：",
+                sec1List: "<li><strong>家庭成員與聯絡資訊</strong>：僅儲存在您裝置本機的安全儲存區，用於計算聯絡提醒。</li><li><strong>口述歷史錄音與故事</strong>：所有語音轉文字與故事整理 100% 於本機端由 Apple NaturalLanguage 引擎處理，音檔永不離開您的 iPhone/iPad。</li><li><strong>心靈日記與情緒分析</strong>：您的文字與情緒指數完全於本機加密計算，無任何第三方 SDK 介入。</li><li><strong>長輩語音對話</strong>：語音指令由 iOS 本地語音框架解析，絕不上傳外部 AI 伺服器進行訓練。</li>",
+                sec2Title: "2. 麥克風與語音辨識權限 (Permissions)",
+                sec2P: "當您使用口述歷史錄製或長輩語音助手時，App 會請求麥克風與語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽或上傳音訊。",
+                sec3Title: "3. 內購與交易安全 (In-App Purchases)",
+                sec3P: "所有交易（個人版與家庭版 Lifetime Pass）均由 Apple App Store 系統直接處理與驗證。我們無法取得您的信用卡卡號或任何帳單個資。",
+                sec4Title: "4. 兒童與家庭安全 (Children's Privacy)",
+                sec4P: "HomeHeart 符合 Apple 家人共享標準，不向任何未成年人收集任何可識別個資。",
+                sec5Title: "5. 政策修訂 (Updates)",
+                sec5P: "若本政策有任何細微調整，將直接於此頁面更新。我們承諾永遠維持「100% 零雲端隱私」的架構原則。",
+                sec6Title: "6. 聯絡我們 (Contact & Support)",
+                sec6P: "如果您對 HomeHeart 的隱私架構有任何問題或建議，歡迎隨時透過電子郵件與開發團隊聯繫："
+            },
+            "en": {
+                backBtn: "← Back to Home",
+                bottomBackBtn: "← Back to HomeHeart Main Page",
+                title: "HomeHeart Privacy Policy",
+                updated: "Effective Date: August 20, 2026",
+                boxTitle: "🌟 Core Privacy Pledge:",
+                boxContent: "HomeHeart is designed entirely on Apple Silicon On-Device AI architecture. <strong>We do not own any cloud database servers. We never collect, upload, or sell any of your personal, family, voice, health, or journal data.</strong>",
+                sec1Title: "1. Data Collection & Usage",
+                sec1P: "On the official Apple App Store Privacy Nutrition Label, HomeHeart is certified as <strong>Data Not Collected</strong>:",
+                sec1List: "<li><strong>Family Members & Contacts</strong>: Stored strictly on your local device to calculate contact frequency reminders.</li><li><strong>Oral History Audio & Stories</strong>: Speech-to-text and story formatting are processed 100% locally by Apple NaturalLanguage. Audio files never leave your device.</li><li><strong>Mindful Mirror Journal</strong>: Your thoughts and emotion scores are calculated with local on-device encryption without any third-party SDKs.</li><li><strong>Senior Voice Navigation</strong>: Processed locally by iOS speech frameworks without uploading to external LLM servers.</li>",
+                sec2Title: "2. Microphone & Speech Recognition Permissions",
+                sec2P: "When you use Oral History recording or Senior Voice Assistant, the app requests microphone access. This runs strictly on-device when tapped and never operates in the background or uploads audio.",
+                sec3Title: "3. In-App Purchases & Security",
+                sec3P: "All transactions (Personal and Family Lifetime Passes) are processed and verified directly by Apple App Store. We do not store or have access to your billing details or credit card information.",
+                sec4Title: "4. Children's & Family Privacy",
+                sec4P: "HomeHeart is compliant with Apple Family Sharing standards and does not collect identifiable information from minors.",
+                sec5Title: "5. Policy Updates",
+                sec5P: "Any minor updates to this policy will be posted directly to this URL. Our foundational commitment to 100% zero-cloud on-device privacy remains permanent.",
+                sec6Title: "6. Contact Support",
+                sec6P: "If you have any questions or feedback regarding HomeHeart's privacy architecture, please contact us:"
+            },
+            "zh-Hans": {
+                backBtn: "← 返回首页",
+                bottomBackBtn: "← 返回 HomeHeart 首页",
+                title: "HomeHeart 隐私权政策",
+                updated: "生效日期：2026 年 8 月 20 日",
+                boxTitle: "🌟 核心隐私承诺：",
+                boxContent: "《HomeHeart 家心》完全基于 Apple Silicon 本地端 AI 架构设计。<strong>我们不拥有任何云端数据库服务器，绝不收集、绝不上传、绝不转售您的任何个人、家庭、通话、录音或日记数据。</strong>",
+                sec1Title: "1. 数据收集与使用 (Data Collection)",
+                sec1P: "在 App Store 官方隐私权营养标签中，HomeHeart 认证为 <strong>「未收集任何数据 (Data Not Collected)」</strong>：",
+                sec1List: "<li><strong>家庭成员与联络信息</strong>：仅存储在您设备本地的安全存储区，用于计算联络提醒。</li><li><strong>口述历史录音与故事</strong>：所有语音转文字与故事整理 100% 于本地端处理，音频永不离开您的 iPhone/iPad。</li><li><strong>心灵日记与情绪分析</strong>：文字与情绪指数完全于本地加密计算，无第三方 SDK 介入。</li><li><strong>长辈语音对话</strong>：语音指令由 iOS 本地语音框架解析，绝不上传外部 AI 服务器。</li>",
+                sec2Title: "2. 麦克风与语音识别权限 (Permissions)",
+                sec2P: "当您使用口述历史录制或长辈语音助手时，App 会请求麦克风权限。此权限仅在主动点击时于本地运行，绝不在后台窃听或上传音频。",
+                sec3Title: "3. 内购与交易安全 (In-App Purchases)",
+                sec3P: "所有交易均由 Apple App Store 系统直接处理与验证。我们无法取得您的信用卡号或账单信息。",
+                sec4Title: "4. 儿童与家庭安全 (Children's Privacy)",
+                sec4P: "HomeHeart 符合 Apple 家人共享标准，不向任何未成年人收集任何可识别个人信息。",
+                sec5Title: "5. 政策修订 (Updates)",
+                sec5P: "若本政策有任何调整，将直接于此页面更新。我们承诺永远维持「100% 零云端隐私」的架构原则。",
+                sec6Title: "6. 联系支持 (Contact & Support)",
+                sec6P: "如果您对 HomeHeart 的隐私架构有任何问题，欢迎随时联系开发团队："
+            },
+            "ja": {
+                backBtn: "← トップに戻る",
+                bottomBackBtn: "← HomeHeart トップページに戻る",
+                title: "HomeHeart プライバシーポリシー",
+                updated: "発効日：2026年8月20日",
+                boxTitle: "🌟 プライバシーへの誓い：",
+                boxContent: "HomeHeartは、Apple Siliconによる完全なオンデバイスAIとして動作します。<strong>当社はクラウドサーバーを一切保有しておらず、お客様やご家族の個人情報、音声、健康記録、日記データを収集・アップロード・販売することは決してありません。</strong>",
+                sec1Title: "1. データの収集と利用について",
+                sec1P: "App Store公式のプライバシーラベルにおいて、HomeHeartは <strong>「データ未収集 (Data Not Collected)」</strong> として認証されています：",
+                sec1List: "<li><strong>家族情報・連絡先</strong>：連絡リマインダー計算のため、端末内だけに安全に保存されます。</li><li><strong>聞き書き音声と物語</strong>：音声認識と文章整理は100%端末内で処理され、外部に送信されません。</li><li><strong>心の鏡（日記）</strong>：感情分析は端末内で暗号化処理され、第三者SDKは一切含まれません。</li><li><strong>シニア音声操作</strong>：iOSのローカル音声認識を使用し、外部AIへの送信は行いません。</li>",
+                sec2Title: "2. マイクと音声認識の権限",
+                sec2P: "聞き書き録音やシニア音声機能を使用する際のみマイク権限を求めます。バックグラウンドでの録音や外部への音声送信は一切ありません。",
+                sec3Title: "3. アプリ内課金とセキュリティ",
+                sec3P: "すべての購入（買い切り型パス）はApple App Storeにより安全に決済・管理されます。当社がお客様のクレジットカード情報を取得することはありません。",
+                sec4Title: "4. お子様とご家族の保護",
+                sec4P: "HomeHeartはAppleファミリー共有の基準に準拠し、未成年者から個人を特定できる情報を収集しません。",
+                sec5Title: "5. ポリシーの改定",
+                sec5P: "ポリシーの変更はこのURLで公開されます。「完全オンデバイス・プライバシー保護」の原則は永続的に維持されます。",
+                sec6Title: "6. お問い合わせ",
+                sec6P: "HomeHeartのプライバシーに関するご質問やご意見は、お気軽にお問い合わせください："
+            },
+            "ko": {
+                backBtn: "← 홈으로 돌아가기",
+                bottomBackBtn: "← HomeHeart 메인 페이지로 돌아가기",
+                title: "HomeHeart 개인정보 처리방침",
+                updated: "시행일자: 2026년 8월 20일",
+                boxTitle: "🌟 핵심 개인정보 보호 약속:",
+                boxContent: "HomeHeart는 100% Apple Silicon 온디바이스 AI로 구동됩니다. <strong>당사는 별도의 클라우드 서버를 운영하지 않으며, 사용자의 개인, 가족, 음성, 복약, 일기 데이터를 절대 수집하거나 외부로 전송하지 않습니다.</strong>",
+                sec1Title: "1. 개인정보 수집 및 이용",
+                sec1P: "Apple App Store 공식 개인정보 영양 라벨에서 HomeHeart는 <strong>「데이터 수집 안 함 (Data Not Collected)」</strong>으로 인증되었습니다:",
+                sec1List: "<li><strong>가족 정보 및 연락처</strong>: 안부 알림 계산을 위해 사용자 기기 내부에만 안전하게 저장됩니다.</li><li><strong>구술 역사 음성 및 기록</strong>: 음성 텍스트 변환과 요약은 기기 내부에서 100% 로컬 처리되며 오디오 파일은 외부로 전송되지 않습니다.</li><li><strong>마음 일기 및 감정 분석</strong>: 외부 SDK 없이 기기 내부에서 안전하게 암호화 분석됩니다.</li><li><strong>어르신 음성 대화</strong>: iOS 로컬 음성 엔진을 사용하며 외부 거대언어모델 서버로 전송되지 않습니다.</li>",
+                sec2Title: "2. 마이크 및 음성 인식 권한",
+                sec2P: "구술 역사 녹음 및 어르신 음성 비서 사용 시에만 마이크 권한을 요청하며, 백그라운드 도청이나 음성 업로드는 일체 없습니다.",
+                sec3Title: "3. 인앱 결제 및 거래 안전",
+                sec3P: "모든 평생 소장권 결제는 Apple App Store를 통해 직접 안전하게 처리되며, 당사는 신용카드 정보를 보유하지 않습니다.",
+                sec4Title: "4. 아동 및 가족 보호",
+                sec4P: "HomeHeart는 Apple 가족 공유 표준을 준수하며 미성년자의 개인정보를 수집하지 않습니다.",
+                sec5Title: "5. 방침 변경 안내",
+                sec5P: "방침 변경 사항은 본 페이지에 즉시 게시되며, 100% 온디바이스 개인정보 보호 원칙은 영구히 유지됩니다.",
+                sec6Title: "6. 고객 지원",
+                sec6P: "HomeHeart의 개인정보 보호 정책에 관한 문의사항은 고객지원 이메일로 연락주시기 바랍니다:"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const data = privacyI18n[lang] || privacyI18n['zh-Hant'];
+            document.documentElement.lang = lang;
+            document.getElementById('languageSelect').value = lang;
+            localStorage.setItem('hh_lang', lang);
+
+            document.getElementById('back_btn').innerText = data.backBtn;
+            document.getElementById('bottom_back_btn').innerText = data.bottomBackBtn;
+            document.getElementById('privacy_title').innerText = data.title;
+            document.getElementById('privacy_updated').innerText = data.updated;
+            document.getElementById('box_title').innerText = data.boxTitle;
+            document.getElementById('box_content').innerHTML = data.boxContent;
+
+            document.getElementById('sec1_title').innerText = data.sec1Title;
+            document.getElementById('sec1_p').innerHTML = data.sec1P;
+            document.getElementById('sec1_list').innerHTML = data.sec1List;
+
+            document.getElementById('sec2_title').innerText = data.sec2Title;
+            document.getElementById('sec2_p').innerText = data.sec2P;
+
+            document.getElementById('sec3_title').innerText = data.sec3Title;
+            document.getElementById('sec3_p').innerText = data.sec3P;
+
+            document.getElementById('sec4_title').innerText = data.sec4Title;
+            document.getElementById('sec4_p').innerText = data.sec4P;
+
+            document.getElementById('sec5_title').innerText = data.sec5Title;
+            document.getElementById('sec5_p').innerText = data.sec5P;
+
+            document.getElementById('sec6_title').innerText = data.sec6Title;
+            document.getElementById('sec6_p').innerText = data.sec6P;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('hh_lang');
+            if (saved && privacyI18n[saved]) {
+                changeLanguage(saved);
+            } else {
+                const userLang = navigator.language || navigator.userLanguage || 'zh-TW';
+                if (userLang.startsWith('en')) changeLanguage('en');
+                else if (userLang.startsWith('zh-CN') || userLang.startsWith('zh-Hans')) changeLanguage('zh-Hans');
+                else if (userLang.startsWith('ja')) changeLanguage('ja');
+                else if (userLang.startsWith('ko')) changeLanguage('ko');
+                else changeLanguage('zh-Hant');
+            }
+        });
+    </script>
 
 </body>
 </html>
