@@ -128,11 +128,15 @@
                 <option value="zh-Hans">简体中文</option>
                 <option value="ja">日本語</option>
                 <option value="ko">한국어</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="it">Italiano</option>
             </select>
         </div>
 
         <h1 id="privacy_title">HomeHeart 隱私權政策</h1>
-        <div class="last-updated" id="privacy_updated">生效日期：2026 年 8 月 20 日</div>
+        <div class="last-updated" id="privacy_updated">生效日期：2026 年 9 月 29 日 (v3.0 更新)</div>
 
         <div class="highlight-box">
             <strong style="color: #FFFFFF;" id="box_title">🌟 核心隱私承諾：</strong><br>
@@ -146,11 +150,11 @@
             <li><strong>口述歷史錄音與故事</strong>：所有語音轉文字與故事整理 100% 於本機端由 Apple NaturalLanguage 引擎處理，音檔永不離開您的 iPhone/iPad。</li>
             <li><strong>心靈日記與情緒分析</strong>：您的文字與情緒指數完全於本機加密計算，無任何第三方 SDK 介入。</li>
             <li><strong>長輩語音對話</strong>：語音指令由 iOS 本地語音框架解析，絕不上傳外部 AI 伺服器進行訓練。</li>
-            <li><strong>機端防詐盾文字分析</strong>：長輩分析之可疑簡訊或電話話術 100% 於本機晶片離線辨識，絕不上傳至任何外部伺服器，分析完成即刻銷毀或僅保留於裝置本機。</li>
+            <li><strong>機端三維防詐盾分析（文字・AI 擬聲・Deepfake 視訊）</strong>：長輩分析之可疑文字簡訊、AI 擬聲特徵及 Deepfake 視訊核驗皆 100% 透過本機端 Apple Neural Engine、Apple Vision 及 NaturalLanguage 離線運算。所有相機預覽、麥克風語音與文字內容絕不上傳至任何外部伺服器，分析完成即刻銷毀或僅保留於裝置本機，嚴格遵循 GDPR 數據最小化原則 (Data Minimization)。</li>
         </ul>
 
-        <h2 id="sec2_title">2. 麥克風與語音辨識權限 (Permissions)</h2>
-        <p id="sec2_p">當您使用口述歷史錄製或長輩語音助手時，App 會請求麥克風與語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽或上傳音訊。</p>
+        <h2 id="sec2_title">2. 麥克風、相機與語音辨識權限 (Permissions)</h2>
+        <p id="sec2_p">當您使用口述歷史錄製、長輩語音助手或 Deepfake 視訊防詐檢測時，App 會請求麥克風、相機或語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽、偷錄或上傳任何音訊與影像。</p>
 
         <h2 id="sec3_title">3. 內購與交易安全 (In-App Purchases)</h2>
         <p id="sec3_p">所有交易（個人版與家庭版 Lifetime Pass）均由 Apple App Store 系統直接處理與驗證。我們無法取得您的信用卡卡號或任何帳單個資。</p>
@@ -174,14 +178,14 @@
                 backBtn: "← 返回首頁",
                 bottomBackBtn: "← 返回 HomeHeart 首頁",
                 title: "HomeHeart 隱私權政策",
-                updated: "生效日期：2026 年 8 月 20 日",
+                updated: "生效日期：2026 年 9 月 29 日 (v3.0 更新)",
                 boxTitle: "🌟 核心隱私承諾：",
                 boxContent: "《HomeHeart 家心》完全基於 Apple Silicon 本機端 AI 架構設計。<strong>我們不擁有任何雲端資料庫伺服器，絕不收集、絕不上傳、絕不轉售您的任何個人、家庭、通話、錄音或日記資料。</strong>",
                 sec1Title: "1. 資料收集與使用 (Data Collection)",
                 sec1P: "在 App Store 官方隱私權營養標籤中，HomeHeart 認證為 <strong>「未收集任何資料 (Data Not Collected)」</strong>：",
-                sec1List: "<li><strong>家庭成員與聯絡資訊</strong>：僅儲存在您裝置本機的安全儲存區，用於計算聯絡提醒。</li><li><strong>口述歷史錄音與故事</strong>：所有語音轉文字與故事整理 100% 於本機端由 Apple NaturalLanguage 引擎處理，音檔永不離開您的 iPhone/iPad。</li><li><strong>心靈日記與情緒分析</strong>：您的文字與情緒指數完全於本機加密計算，無任何第三方 SDK 介入。</li><li><strong>長輩語音對話</strong>：語音指令由 iOS 本地語音框架解析，絕不上傳外部 AI 伺服器進行訓練。</li><li><strong>機端防詐盾文字分析</strong>：長輩分析之可疑簡訊或電話話術 100% 於本機晶片離線辨識，絕不上傳至任何外部伺服器，分析完成即刻銷毀或僅保留於裝置本機。</li>",
-                sec2Title: "2. 麥克風與語音辨識權限 (Permissions)",
-                sec2P: "當您使用口述歷史錄製或長輩語音助手時，App 會請求麥克風與語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽或上傳音訊。",
+                sec1List: "<li><strong>家庭成員與聯絡資訊</strong>：僅儲存在您裝置本機的安全儲存區，用於計算聯絡提醒。</li><li><strong>口述歷史錄音與故事</strong>：所有語音轉文字與故事整理 100% 於本機端由 Apple NaturalLanguage 引擎處理，音檔永不離開您的 iPhone/iPad。</li><li><strong>心靈日記與情緒分析</strong>：您的文字與情緒指數完全於本機加密計算，無任何第三方 SDK 介入。</li><li><strong>長輩語音對話</strong>：語音指令由 iOS 本地語音框架解析，絕不上傳外部 AI 伺服器進行訓練。</li><li><strong>機端三維防詐盾分析（文字・AI 擬聲・Deepfake 視訊）</strong>：長輩分析之可疑文字簡訊、AI 擬聲特徵及 Deepfake 視訊核驗皆 100% 透過本機端 Apple Neural Engine、Apple Vision 及 NaturalLanguage 離線運算。所有相機預覽、麥克風語音與文字內容絕不上傳至任何外部伺服器，分析完成即刻銷毀或僅保留於裝置本機，嚴格遵循 GDPR 數據最小化原則 (Data Minimization)。</li>",
+                sec2Title: "2. 麥克風、相機與語音辨識權限 (Permissions)",
+                sec2P: "當您使用口述歷史錄製、長輩語音助手或 Deepfake 視訊防詐檢測時，App 會請求麥克風、相機或語音辨識權限。此權限僅在您主動點擊按鈕時於本機運行，絕不在背景竊聽、偷錄或上傳任何音訊與影像。",
                 sec3Title: "3. 內購與交易安全 (In-App Purchases)",
                 sec3P: "所有交易（個人版與家庭版 Lifetime Pass）均由 Apple App Store 系統直接處理與驗證。我們無法取得您的信用卡卡號或任何帳單個資。",
                 sec4Title: "4. 兒童與家庭安全 (Children's Privacy)",
@@ -195,14 +199,14 @@
                 backBtn: "← Back to Home",
                 bottomBackBtn: "← Back to HomeHeart Main Page",
                 title: "HomeHeart Privacy Policy",
-                updated: "Effective Date: August 20, 2026",
+                updated: "Effective Date: September 29, 2026 (v3.0 Update)",
                 boxTitle: "🌟 Core Privacy Pledge:",
                 boxContent: "HomeHeart is designed entirely on Apple Silicon On-Device AI architecture. <strong>We do not own any cloud database servers. We never collect, upload, or sell any of your personal, family, voice, health, or journal data.</strong>",
                 sec1Title: "1. Data Collection & Usage",
                 sec1P: "On the official Apple App Store Privacy Nutrition Label, HomeHeart is certified as <strong>Data Not Collected</strong>:",
-                sec1List: "<li><strong>Family Members & Contacts</strong>: Stored strictly on your local device to calculate contact frequency reminders.</li><li><strong>Oral History Audio & Stories</strong>: Speech-to-text and story formatting are processed 100% locally by Apple NaturalLanguage. Audio files never leave your device.</li><li><strong>Mindful Mirror Journal</strong>: Your thoughts and emotion scores are calculated with local on-device encryption without any third-party SDKs.</li><li><strong>Senior Voice Navigation</strong>: Processed locally by iOS speech frameworks without uploading to external LLM servers.</li><li><strong>Anti-Scam Text Analysis</strong>: Suspicious messages or scripts analyzed by the Anti-Scam Shield are evaluated 100% locally on-device and never stored externally or transmitted across networks.</li>",
-                sec2Title: "2. Microphone & Speech Recognition Permissions",
-                sec2P: "When you use Oral History recording or Senior Voice Assistant, the app requests microphone access. This runs strictly on-device when tapped and never operates in the background or uploads audio.",
+                sec1List: "<li><strong>Family Members & Contacts</strong>: Stored strictly on your local device to calculate contact frequency reminders.</li><li><strong>Oral History Audio & Stories</strong>: Speech-to-text and story formatting are processed 100% locally by Apple NaturalLanguage. Audio files never leave your device.</li><li><strong>Mindful Mirror Journal</strong>: Your thoughts and emotion scores are calculated with local on-device encryption without any third-party SDKs.</li><li><strong>Senior Voice Navigation</strong>: Processed locally by iOS speech frameworks without uploading to external LLM servers.</li><li><strong>Tri-Shield Anti-Scam Analysis (Text, AI Voice Clones & Deepfake Video)</strong>: Suspicious messages, AI synthetic voice patterns, and Deepfake video inspections are analyzed 100% on-device using Apple Neural Engine, Apple Vision, and NaturalLanguage. Camera previews, voice audio, and text never leave the device, ensuring strict compliance with GDPR Article 5(1)(c) data minimization standards.</li>",
+                sec2Title: "2. Microphone, Camera & Speech Recognition Permissions",
+                sec2P: "When using Oral History recording, Senior Voice Assistant, or Deepfake Video inspection, the app requests microphone, camera, or speech recognition access. These run strictly on-device upon explicit user action and never capture, eavesdrop, or transmit data in the background.",
                 sec3Title: "3. In-App Purchases & Security",
                 sec3P: "All transactions (Personal and Family Lifetime Passes) are processed and verified directly by Apple App Store. We do not store or have access to your billing details or credit card information.",
                 sec4Title: "4. Children's & Family Privacy",
@@ -216,14 +220,14 @@
                 backBtn: "← 返回首页",
                 bottomBackBtn: "← 返回 HomeHeart 首页",
                 title: "HomeHeart 隐私权政策",
-                updated: "生效日期：2026 年 8 月 20 日",
+                updated: "生效日期：2026 年 9 月 29 日 (v3.0 更新)",
                 boxTitle: "🌟 核心隐私承诺：",
                 boxContent: "《HomeHeart 家心》完全基于 Apple Silicon 本地端 AI 架构设计。<strong>我们不拥有任何云端数据库服务器，绝不收集、绝不上传、绝不转售您的任何个人、家庭、通话、录音或日记数据。</strong>",
                 sec1Title: "1. 数据收集与使用 (Data Collection)",
                 sec1P: "在 App Store 官方隐私权营养标签中，HomeHeart 认证为 <strong>「未收集任何数据 (Data Not Collected)」</strong>：",
-                sec1List: "<li><strong>家庭成员与联络信息</strong>：仅存储在您设备本地的安全存储区，用于计算联络提醒。</li><li><strong>口述历史录音与故事</strong>：所有语音转文字与故事整理 100% 于本地端处理，音频永不离开您的 iPhone/iPad。</li><li><strong>心灵日记与情绪分析</strong>：文字与情绪指数完全于本地加密计算，无第三方 SDK 介入。</li><li><strong>长辈语音对话</strong>：语音指令由 iOS 本地语音框架解析，绝不上传外部 AI 服务器。</li><li><strong>机端防诈盾文本分析</strong>：长辈分析的可疑短信或电话话术 100% 于本地芯片离线识别，绝不上传至任何外部服务器，分析完成即刻销毁或仅保留于设备本地。</li>",
-                sec2Title: "2. 麦克风与语音识别权限 (Permissions)",
-                sec2P: "当您使用口述历史录制或长辈语音助手时，App 会请求麦克风权限。此权限仅在主动点击时于本地运行，绝不在后台窃听或上传音频。",
+                sec1List: "<li><strong>家庭成员与联络信息</strong>：仅存储在您设备本地的安全存储区，用于计算联络提醒。</li><li><strong>口述历史录音与故事</strong>：所有语音转文字与故事整理 100% 于本地端处理，音频永不离开您的 iPhone/iPad。</li><li><strong>心灵日记与情绪分析</strong>：文字与情绪指数完全于本地加密计算，无第三方 SDK 介入。</li><li><strong>长辈语音对话</strong>：语音指令由 iOS 本地语音框架解析，绝不上传外部 AI 服务器。</li><li><strong>本地三维防诈盾分析（文本・AI 拟声・Deepfake 视频）</strong>：长辈分析的可疑文本短信、AI 拟声特征及 Deepfake 视频核验皆 100% 通过本地 Apple Neural Engine、Apple Vision 及 NaturalLanguage 离线运算。所有相机预览、麦克风语音与文本内容绝不上传至任何外部服务器，严格遵循 GDPR 数据最小化原则。</li>",
+                sec2Title: "2. 麦克风、相机与语音识别权限 (Permissions)",
+                sec2P: "当您使用口述历史录制、长辈语音助手或 Deepfake 视频防诈检测时，App 会请求麦克风、相机或语音识别权限。此权限仅在主动点击时于本地运行，绝不在后台窃听、偷录或上传任何音频与影像。",
                 sec3Title: "3. 内购与交易安全 (In-App Purchases)",
                 sec3P: "所有交易均由 Apple App Store 系统直接处理与验证。我们无法取得您的信用卡号或账单信息。",
                 sec4Title: "4. 儿童与家庭安全 (Children's Privacy)",
@@ -237,14 +241,14 @@
                 backBtn: "← トップに戻る",
                 bottomBackBtn: "← HomeHeart トップページに戻る",
                 title: "HomeHeart プライバシーポリシー",
-                updated: "発効日：2026年8月20日",
+                updated: "発効日：2026年9月29日 (v3.0 更新)",
                 boxTitle: "🌟 プライバシーへの誓い：",
                 boxContent: "HomeHeartは、Apple Siliconによる完全なオンデバイスAIとして動作します。<strong>当社はクラウドサーバーを一切保有しておらず、お客様やご家族の個人情報、音声、健康記録、日記データを収集・アップロード・販売することは決してありません。</strong>",
                 sec1Title: "1. データの収集と利用について",
                 sec1P: "App Store公式のプライバシーラベルにおいて、HomeHeartは <strong>「データ未収集 (Data Not Collected)」</strong> として認証されています：",
-                sec1List: "<li><strong>家族情報・連絡先</strong>：連絡リマインダー計算のため、端末内だけに安全に保存されます。</li><li><strong>聞き書き音声と物語</strong>：音声認識と文章整理は100%端末内で処理され、外部に送信されません。</li><li><strong>心の鏡（日記）</strong>：感情分析は端末内で暗号化処理され、第三者SDKは一切含まれません。</li><li><strong>シニア音声操作</strong>：iOSのローカル音声認識を使用し、外部AIへの送信は行いません。</li><li><strong>詐欺検知テキスト分析</strong>：不審なSMSや電話テキストの分析は100%端末内のAIチップで実行され、外部サーバーへのアップロードや記録は一切行われません。</li>",
-                sec2Title: "2. マイクと音声認識の権限",
-                sec2P: "聞き書き録音やシニア音声機能を使用する際のみマイク権限を求めます。バックグラウンドでの録音や外部への音声送信は一切ありません。",
+                sec1List: "<li><strong>家族情報・連絡先</strong>：連絡リマインダー計算のため、端末内だけに安全に保存されます。</li><li><strong>聞き書き音声と物語</strong>：音声認識と文章整理は100%端末内で処理され、外部に送信されません。</li><li><strong>心の鏡（日記）</strong>：感情分析は端末内で暗号化処理され、第三者SDKは一切含まれません。</li><li><strong>シニア音声操作</strong>：iOSのローカル音声認識を使用し、外部AIへの送信は行いません。</li><li><strong>三次元詐欺検知シールド（テキスト・AI 音声・Deepfake 映像）</strong>：不審なSMS、AI 合成音声、Deepfake 偽造映像の検査は、すべて端末内の Apple Neural Engine、Apple Vision、NaturalLanguage でオフライン処理されます。カメラ映像や音声データが端末外に送信されることは一切なく、GDPR データ最小化原則を遵守します。</li>",
+                sec2Title: "2. マイク・カメラ・音声認識の権限",
+                sec2P: "聞き書き録音、シニア音声機能、または Deepfake 映像検査を使用する際のみマイクやカメラの権限を求めます。バックグラウンドでの録音・撮影や外部送信は一切行われません。",
                 sec3Title: "3. アプリ内課金とセキュリティ",
                 sec3P: "すべての購入（買い切り型パス）はApple App Storeにより安全に決済・管理されます。当社がお客様のクレジットカード情報を取得することはありません。",
                 sec4Title: "4. お子様とご家族の保護",
@@ -258,14 +262,14 @@
                 backBtn: "← 홈으로 돌아가기",
                 bottomBackBtn: "← HomeHeart 메인 페이지로 돌아가기",
                 title: "HomeHeart 개인정보 처리방침",
-                updated: "시행일자: 2026년 8월 20일",
+                updated: "시행일자: 2026년 9월 29일 (v3.0 업데이트)",
                 boxTitle: "🌟 핵심 개인정보 보호 약속:",
                 boxContent: "HomeHeart는 100% Apple Silicon 온디바이스 AI로 구동됩니다. <strong>당사는 별도의 클라우드 서버를 운영하지 않으며, 사용자의 개인, 가족, 음성, 복약, 일기 데이터를 절대 수집하거나 외부로 전송하지 않습니다.</strong>",
                 sec1Title: "1. 개인정보 수집 및 이용",
                 sec1P: "Apple App Store 공식 개인정보 영양 라벨에서 HomeHeart는 <strong>「데이터 수집 안 함 (Data Not Collected)」</strong>으로 인증되었습니다:",
-                sec1List: "<li><strong>가족 정보 및 연락처</strong>: 안부 알림 계산을 위해 사용자 기기 내부에만 안전하게 저장됩니다.</li><li><strong>구술 역사 음성 및 기록</strong>: 음성 텍스트 변환과 요약은 기기 내부에서 100% 로컬 처리되며 오디오 파일은 외부로 전송되지 않습니다.</li><li><strong>마음 일기 및 감정 분석</strong>: 외부 SDK 없이 기기 내부에서 안전하게 암호화 분석됩니다.</li><li><strong>어르신 음성 대화</strong>: iOS 로컬 음성 엔진을 사용하며 외부 거대언어모델 서버로 전송되지 않습니다.</li><li><strong>보이스피싱 텍스트 분석</strong>: 의심스러운 문자나 통화 내용 분석은 100% 기기 내 칩셋에서 오프라인으로 처리되며 외부 서버 전송이나 저장이 전혀 없습니다.</li>",
-                sec2Title: "2. 마이크 및 음성 인식 권한",
-                sec2P: "구술 역사 녹음 및 어르신 음성 비서 사용 시에만 마이크 권한을 요청하며, 백그라운드 도청이나 음성 업로드는 일체 없습니다.",
+                sec1List: "<li><strong>가족 정보 및 연락처</strong>: 안부 알림 계산을 위해 사용자 기기 내부에만 안전하게 저장됩니다.</li><li><strong>구술 역사 음성 및 기록</strong>: 음성 텍스트 변환과 요약은 기기 내부에서 100% 로컬 처리되며 오디오 파일은 외부로 전송되지 않습니다.</li><li><strong>마음 일기 및 감정 분석</strong>: 외부 SDK 없이 기기 내부에서 안전하게 암호화 분석됩니다.</li><li><strong>어르신 음성 대화</strong>: iOS 로컬 음성 엔진을 사용하며 외부 거대언어모델 서버로 전송되지 않습니다.</li><li><strong>트리플 피싱 안심 분석（문자・AI 음성・딥페이크 영상）</strong>: 의심 문자, AI 음성 복제, 딥페이크 위조 영상 분석은 Apple Neural Engine, Apple Vision 및 NaturalLanguage를 통해 기기 내부에서 100% 오프라인 처리됩니다. 카메라 프리뷰 및 음성은 외부 서버로 절대 전송되지 않으며 GDPR 데이터 최소화 원칙을 엄격히 준수합니다.</li>",
+                sec2Title: "2. 마이크, 카메라 및 음성 인식 권한",
+                sec2P: "구술 역사 녹음, 어르신 음성 비서, 또는 딥페이크 안심 검사 시에만 마이크, 카메라 권한을 요청하며, 백그라운드 도청이나 녹화, 외부 데이터 전송은 일체 없습니다.",
                 sec3Title: "3. 인앱 결제 및 거래 안전",
                 sec3P: "모든 평생 소장권 결제는 Apple App Store를 통해 직접 안전하게 처리되며, 당사는 신용카드 정보를 보유하지 않습니다.",
                 sec4Title: "4. 아동 및 가족 보호",
@@ -274,6 +278,90 @@
                 sec5P: "방침 변경 사항은 본 페이지에 즉시 게시되며, 100% 온디바이스 개인정보 보호 원칙은 영구히 유지됩니다.",
                 sec6Title: "6. 고객 지원",
                 sec6P: "HomeHeart의 개인정보 보호 정책에 관한 문의사항은 고객지원 이메일로 연락주시기 바랍니다:"
+            },
+            "de": {
+                backBtn: "← Zurück zur Startseite",
+                bottomBackBtn: "← Zurück zur HomeHeart Startseite",
+                title: "HomeHeart Datenschutzerklärung",
+                updated: "Gültig ab: 29. September 2026 (v3.0 Aktualisierung)",
+                boxTitle: "🌟 Zentrales Datenschutzversprechen:",
+                boxContent: "HomeHeart basiert vollständig auf Apple Silicon On-Device KI. <strong>Wir besitzen keine Cloud-Datenbankserver. Wir erheben, übertragen oder verkaufen zu keinem Zeitpunkt persönliche Daten, Familiendaten, Sprachaufzeichnungen, Gesundheitsdaten oder Tagebucheinträge.</strong>",
+                sec1Title: "1. Datenerhebung und -verwendung (DSGVO Art. 5(1)(c))",
+                sec1P: "Im offiziellen Apple App Store Datenschutz-Label ist HomeHeart als <strong>„Keine Daten erfasst (Data Not Collected)“</strong> zertifiziert:",
+                sec1List: "<li><strong>Familienmitglieder & Kontakte</strong>: Werden ausschließlich lokal auf Ihrem Gerät gespeichert, um Kontakthäufigkeits-Erinnerungen zu berechnen.</li><li><strong>Audioaufnahmen der Zeitgeschichte & Geschichten</strong>: Spracherkennung und Formatierung erfolgen zu 100% lokal über Apple NaturalLanguage. Audiodateien verlassen Ihr iPhone/iPad niemals.</li><li><strong>Achtsamer Spiegel & Emotionstagebuch</strong>: Ihre Gedanken und Emotionsanalysen werden lokal verschlüsselt ohne Drittanbieter-SDKs verarbeitet.</li><li><strong>Senioren-Sprachsteuerung</strong>: Wird lokal von iOS-Sprachframeworks verarbeitet, ohne Upload an externe LLM-Server.</li><li><strong>Tri-Shield Anti-Betrugs-Analyse (Text, KI-Stimmenklone & Deepfake-Video)</strong>: Verdächtige Nachrichten, KI-Stimmenmuster und Deepfake-Videoprüfungen werden zu 100% geräteintern über Apple Neural Engine, Apple Vision und NaturalLanguage offline analysiert. Kamera-Vorschauen, Audiospuren und Texte verlassen niemals das Gerät – in strikter Übereinstimmung mit dem Grundsatz der Datenminimierung gemäß Art. 5 Abs. 1 lit. c DSGVO.</li>",
+                sec2Title: "2. Berechtigungen für Mikrofon, Kamera und Spracherkennung",
+                sec2P: "Beim Aufnehmen von Geschichten, der Senioren-Sprachfunktion oder der Deepfake-Prüfung fragt die App nach Mikrofon-, Kamera- oder Spracherkennungsberechtigungen. Diese laufen ausschließlich bei expliziter Nutzerinteraktion auf dem Gerät und greifen niemals unbemerkt im Hintergrund auf Daten zu.",
+                sec3Title: "3. In-App-Käufe und Transaktionssicherheit",
+                sec3P: "Alle Käufe (Lebenszeit-Pässe) werden direkt über den Apple App Store abgewickelt und validiert. Wir haben keinen Zugriff auf Zahlungs- oder Kreditkartendaten.",
+                sec4Title: "4. Schutz von Kindern und Familien",
+                sec4P: "HomeHeart erfüllt alle Standards der Apple Familienfreigabe und erfasst keine personenbezogenen Daten von Minderjährigen.",
+                sec5Title: "5. Änderungen der Richtlinie",
+                sec5P: "Änderungen werden direkt auf dieser Webseite veröffentlicht. Unser Grundsatz des 100% geräteinternen Datenschutzes ohne Cloud bleibt dauerhaft bestehen.",
+                sec6Title: "6. Kontakt & Support",
+                sec6P: "Wenn Sie Fragen oder Anregungen zur Datenschutzarchitektur von HomeHeart haben, kontaktieren Sie uns gerne per E-Mail:"
+            },
+            "fr": {
+                backBtn: "← Retour à l'accueil",
+                bottomBackBtn: "← Retour à la page d'accueil HomeHeart",
+                title: "Politique de Confidentialité HomeHeart",
+                updated: "Date d'effet : 29 septembre 2026 (Mise à jour v3.0)",
+                boxTitle: "🌟 Engagement Fondamental de Confidentialité :",
+                boxContent: "HomeHeart est entièrement conçu sur l'architecture IA sur l'appareil Apple Silicon. <strong>Nous ne possédons aucun serveur cloud. Nous ne collectons, ne téléchargeons ni ne revendons jamais vos données personnelles, familiales, vocales, médicales ou intimes.</strong>",
+                sec1Title: "1. Collecte et Utilisation des Données (RGPD Art. 5(1)(c))",
+                sec1P: "Sur l'étiquette nutritionnelle de confidentialité de l'App Store, HomeHeart est certifié <strong>« Données non collectées (Data Not Collected) »</strong> :",
+                sec1List: "<li><strong>Membres de la famille & Contacts</strong> : Stockés exclusivement en local pour calculer les rappels de prise de contact.</li><li><strong>Enregistrements de récits de vie & Histoires</strong> : La reconnaissance vocale et la mise en page sont traitées à 100% en local par Apple NaturalLanguage. Les fichiers audio ne quittent jamais votre appareil.</li><li><strong>Journal Miroir Intérieur</strong> : Vos pensées et émotions sont analysées avec chiffrement local sans aucun SDK tiers.</li><li><strong>Navigation vocale aînés</strong> : Traitée localement par les frameworks vocaux d'iOS sans transfert vers des serveurs d'IA externes.</li><li><strong>Analyse Anti-Fraude Tri-Shield (Texte, Clones de Voix IA & Vidéo Deepfake)</strong> : Les messages suspects, caractéristiques acoustiques synthétiques et contrôles vidéo sont analysés à 100% hors ligne sur l'appareil via Apple Neural Engine, Apple Vision et NaturalLanguage. Les aperçus caméra, les sons et les textes ne quittent jamais votre appareil, respectant rigoureusement le principe de minimisation des données (Article 5(1)(c) du RGPD).</li>",
+                sec2Title: "2. Autorisations Microphone, Caméra et Reconnaissance Vocale",
+                sec2P: "Lors de l'enregistrement d'histoires, de l'utilisation de l'assistant vocal ou du scan deepfake, l'application demande l'accès au micro, à la caméra ou à la reconnaissance vocale. Ces opérations s'exécutent strictement en local sur action explicite et ne fonctionnent jamais en arrière-plan.",
+                sec3Title: "3. Achats Intégrés et Sécurité des Transactions",
+                sec3P: "Toutes les transactions sont gérées directement par l'App Store d'Apple. Nous n'avons aucun accès à vos informations bancaires ou de carte de crédit.",
+                sec4Title: "4. Protection des Enfants et des Familles",
+                sec4P: "HomeHeart respecte les exigences du Partage familial Apple et ne collecte aucune donnée personnelle relative aux mineurs.",
+                sec5Title: "5. Mises à Jour de la Politique",
+                sec5P: "Toute mise à jour mineure sera publiée directement sur cette page. Notre engagement envers une confidentialité 100% hors-ligne et sans cloud demeure permanent.",
+                sec6Title: "6. Contact et Assistance",
+                sec6P: "Pour toute question relative à l'architecture de confidentialité de HomeHeart, écrivez-nous à :"
+            },
+            "es": {
+                backBtn: "← Volver al inicio",
+                bottomBackBtn: "← Volver a la página principal de HomeHeart",
+                title: "Política de Privacidad de HomeHeart",
+                updated: "Fecha de vigencia: 29 de septiembre de 2026 (Actualización v3.0)",
+                boxTitle: "🌟 Compromiso Esencial de Privacidad:",
+                boxContent: "HomeHeart está diseñado íntegramente sobre la arquitectura de IA en el dispositivo de Apple Silicon. <strong>No poseemos servidores en la nube. Nunca recopilamos, subimos ni vendemos datos personales, familiares, de voz, de salud o de su diario.</strong>",
+                sec1Title: "1. Recopilación y Uso de Datos (RGPD Art. 5(1)(c))",
+                sec1P: "En la etiqueta oficial de privacidad de App Store, HomeHeart cuenta con la certificación <strong>«Datos no recopilados (Data Not Collected)»</strong>:",
+                sec1List: "<li><strong>Familiares y contactos</strong>: Almacenados exclusivamente de forma local para calcular recordatorios de contacto afectuoso.</li><li><strong>Grabaciones de memoria oral e historias</strong>: El procesamiento de voz a texto y formato de historias se realiza 100% en local mediante Apple NaturalLanguage. Los audios nunca salen del dispositivo.</li><li><strong>Espejo Consciente y diario emocional</strong>: Cifrado y análisis local sin SDKs de terceros.</li><li><strong>Asistente de voz para mayores</strong>: Procesado localmente con las herramientas de iOS sin transferirse a servidores LLM externos.</li><li><strong>Análisis Antifraude Tri-Shield (Texto, Clones de Voz IA y Video Deepfake)</strong>: Detección 100% en el dispositivo con Apple Neural Engine, Apple Vision y NaturalLanguage. Las vistas de cámara, audios y textos nunca se transfieren a servidores externos, garantizando el principio de minimización de datos del Artículo 5(1)(c) del RGPD.</li>",
+                sec2Title: "2. Permisos de Micrófono, Cámara y Reconocimiento de Voz",
+                sec2P: "Solo se solicitan al iniciar activamente una grabación de memorias, dictado para mayores o verificación de deepfake. No se realizan grabaciones en segundo plano ni envíos externos.",
+                sec3Title: "3. Compras dentro de la App y Seguridad",
+                sec3P: "Todas las compras son procesadas directamente por App Store de Apple. No almacenamos datos de pago ni tarjetas de crédito.",
+                sec4Title: "4. Privacidad de Menores y Familias",
+                sec4P: "HomeHeart cumple con los estándares de Compartir en Familia de Apple y no recopila datos de menores de edad.",
+                sec5Title: "5. Actualizaciones de la Política",
+                sec5P: "Cualquier actualización se publicará en esta URL. Nuestro principio de privacidad 100% en el dispositivo sin nube es permanente.",
+                sec6Title: "6. Contacto y Soporte",
+                sec6P: "Si tiene dudas sobre nuestra arquitectura de privacidad, contáctenos en:"
+            },
+            "it": {
+                backBtn: "← Torna alla Home",
+                bottomBackBtn: "← Torna alla pagina iniziale di HomeHeart",
+                title: "Informativa sulla Privacy di HomeHeart",
+                updated: "Data di efficacia: 29 settembre 2026 (Aggiornamento v3.0)",
+                boxTitle: "🌟 Impegno Fondamentale per la Privacy:",
+                boxContent: "HomeHeart è sviluppato interamente sull'architettura IA sul dispositivo di Apple Silicon. <strong>Non possediamo alcun server cloud. Non raccogliamo, trasmettiamo né rivendiamo dati personali, familiari, vocali, sanitari o del diario.</strong>",
+                sec1Title: "1. Raccolta e Utilizzo dei Dati (GDPR Art. 5(1)(c))",
+                sec1P: "Nell'etichetta nutrizionale sulla privacy di App Store, HomeHeart è certificato come <strong>«Dati non raccolti (Data Not Collected)»</strong>:",
+                sec1List: "<li><strong>Membri della famiglia e contatti</strong>: Memorizzati esclusivamente in locale sul dispositivo per il calcolo della frequenza dei contatti.</li><li><strong>Registrazioni di storie orali e memorie</strong>: La trascrizione vocale e l'impaginazione sono elaborate al 100% in locale tramite Apple NaturalLanguage. I file audio non lasciano mai il dispositivo.</li><li><strong>Specchio della Mente e riflessione emotiva</strong>: Analisi crittografata in locale senza SDK di terze parti.</li><li><strong>Navigazione vocale per anziani</strong>: Gestita localmente dai framework iOS senza invio a server LLM esterni.</li><li><strong>Scudo Anti-Frode Tri-Shield (Testo, Cloni Vocali IA e Video Deepfake)</strong>: Analisi 100% offline sul dispositivo con Apple Neural Engine, Apple Vision e NaturalLanguage. Anteprime video, registrazioni vocali e testi non lasciano mai il dispositivo, nel pieno rispetto del principio di minimizzazione dei dati (Art. 5(1)(c) GDPR).</li>",
+                sec2Title: "2. Autorizzazioni Microfono, Fotocamera e Riconoscimento Vocale",
+                sec2P: "Richieste unicamente all'avvio manuale della registrazione di storie, dell'assistente vocale o del controllo deepfake. Nessun accesso o registrazione in background.",
+                sec3Title: "3. Acquisti in-app e Sicurezza delle Transazioni",
+                sec3P: "Tutte le transazioni a vita sono gestite in modo sicuro da App Store di Apple. Non abbiamo accesso ai dati della carta di credito.",
+                sec4Title: "4. Tutela dei Minori e della Famiglia",
+                sec4P: "HomeHeart è conforme agli standard 'In Famiglia' di Apple e non raccoglie dati personali di minori.",
+                sec5Title: "5. Modifiche all'Informativa",
+                sec5P: "Eventuali modifiche saranno pubblicate su questa pagina. Il nostro impegno per una privacy al 100% sul dispositivo e zero cloud è permanente.",
+                sec6Title: "6. Assistenza e Contatti",
+                sec6P: "Per qualsiasi richiesta in merito all'architettura di privacy di HomeHeart, potete contattarci all'indirizzo:"
             }
         };
 
@@ -320,6 +408,10 @@
                 else if (userLang.startsWith('zh-CN') || userLang.startsWith('zh-Hans')) changeLanguage('zh-Hans');
                 else if (userLang.startsWith('ja')) changeLanguage('ja');
                 else if (userLang.startsWith('ko')) changeLanguage('ko');
+                else if (userLang.startsWith('de')) changeLanguage('de');
+                else if (userLang.startsWith('fr')) changeLanguage('fr');
+                else if (userLang.startsWith('es')) changeLanguage('es');
+                else if (userLang.startsWith('it')) changeLanguage('it');
                 else changeLanguage('zh-Hant');
             }
         });
